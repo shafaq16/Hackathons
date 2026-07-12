@@ -19,6 +19,7 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional refetch-on-filter-change
     setLoading(true);
     const params = {};
     if (type) params.type = type;
